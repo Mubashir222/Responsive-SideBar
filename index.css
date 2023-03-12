@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'poppins', sans-serif; */
+}
+body{
+    height: 100vh;
+}
+
+.navigation{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 60px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-sizing: initial;
+    border-left: 5px solid blue;
+    background-color: blue;
+    transition: 0.5s;
+    overflow-x: hidden;
+}
+.navigation.active{
+    width: 225px;
+    border-left: 5px solid darkblue;
+    background-color: darkblue;
+}
+
+.navigation ul {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.navigation ul li.active{
+    background-color: white;
+}
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: white;
+}
+.navigation ul li.active a{
+    color: black;
+}
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    padding-top: 5px;
+}
+.navigation ul li a .icon ion-icon {
+   font-size: 1.5rem;
+}
+.navigation ul li a .title {
+    position: relative;
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    white-space: normal;
+}
+
+
+.toggle {
+    position: fixed;
+    top: 20px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.toggle.active {
+    background-color: darkblue;
+}
+.toggle ion-icon {
+    position: absolute;
+    color: white;
+    font-size: 3rem;
+    display: none;
+}
+.toggle ion-icon.open,
+.toggle.active ion-icon.close {
+    display: block;
+}
+.toggle ion-icon.close,
+.toggle.active ion-icon.open {
+    display: none;
+}
